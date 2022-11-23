@@ -143,6 +143,7 @@ button,#song-name{
     margin: 0 auto;
     /* margin-top: 10px; */
     width: max-content;
+    max-width: 90vw;
     /* border: 10px solid palegreen; */
     
 }
