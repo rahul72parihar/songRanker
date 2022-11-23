@@ -1,0 +1,164 @@
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+body{
+    font-family: 'roboto';
+    margin:0;
+    background: url(background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-color:#ccc;
+}
+div{
+    margin: 0;
+}
+/* HEADING  */
+#heading{
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 6vw;
+    /* border: 2px solid pink; */
+    width: 100vw;
+    margin: 0;
+    background-color: rgba(31, 81, 122, 0.596);
+
+}
+button{
+    width: max-content;
+    margin: 0 auto;
+    text-shadow: 0 0 2px black;
+    padding: 0.5em 1em;
+    color: white;
+    font-size: 4vw;
+    font-weight: bolder;
+    text-transform: uppercase;
+    transition: 0.3s;
+    background-color: rgb(0, 32, 58);
+    border-radius: 5%;
+    border: none;
+}
+#song-name{
+    color: white;
+    font-size: 4vw;
+    width: max-content;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    background-color: rgba(0, 122, 221, 0.527);
+}
+button:hover{
+    background-color: rgb(16, 85, 141);
+}
+@media (min-width: 600px) {
+    #heading{
+        font-size: 2rem;
+    }
+    button,#song-name{
+        font-size: 1.5rem;
+    }
+}
+#main-el{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    border: 1px solid pink;
+    /* border: 10px solid black; */
+}
+#cols{
+    margin:0;
+    display: grid;
+    height: 90vh;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 50% 50%;
+}
+@media (min-width: 800px) {
+    #cols{
+        grid-template-rows: 1fr ;
+        grid-template-columns:1fr 1fr;
+    }
+}
+#first,#second{
+    padding: 1em;
+    margin:0;
+    height: 100%;
+    display: grid;
+    width: 100%;
+    grid-template-rows: min-content 1fr min-content;
+    align-items: center;
+}
+#first{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+#second{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+iframe{
+    width: 90vw;
+    margin: 0 auto;
+    height: 30vh;
+    padding-bottom: 0.5em;
+}
+
+@media (min-width:800px) {
+    #first,#second{
+        height: 90vh;
+    }
+    iframe{
+        width: 40vw;
+        height: 90%;
+    }
+}
+.endMain{
+    border-radius: 10px;
+    box-shadow: 0 0 10px black;
+    background: linear-gradient(  rgba(0, 0, 0, 0.808) 0%, rgba(0, 0, 0, 0.651) 40%, rgba(15, 0, 100, 0.363) 100%);
+    text-align: center;
+    color: white;
+    text-shadow: 0px 0px 3px black;
+    font-size: 5vw;
+    margin: 5% auto;
+    width: max-content;
+    /* border: 10px solid palegreen; */
+    
+}
+.endMain h2{
+    font-size: inherit;
+    margin: 0;
+    padding: 0.5em;
+}
+.endMain .endTop{
+    font-size: 7vw;
+    color: rgb(226, 204, 0);
+    text-shadow: 0 0 3px wheat;
+}
+.endMain .endMid{
+    font-size: 6vw;
+}
+.endMain .endLower{
+    font-size: 5vw;
+}
+.endMain .endEnd{
+    font-size: 4vw;
+}
+@media (min-width : 800px) {
+    .endMain{
+        font-size: 2rem;
+    }
+    .endMain .endTop{
+        font-size: 3.5rem;
+    }
+    .endMain .endMid{
+        font-size: 2.5rem;
+    }
+    .endMain .endLower{
+        font-size: 2rem;
+    }
+    .endMain .endEnd{
+        font-size: 1.5rem;
+    }
+}
