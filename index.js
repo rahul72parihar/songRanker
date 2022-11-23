@@ -69,12 +69,12 @@ function render(){
             <div id = "first">
                 <h2 id="song-name">${songData[currFirst].title}</h2>
                 <iframe src="${songData[currFirst].embed}?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
-                <button class="firstBtn">This</button>
+                <button class="firstBtn">This is Better</button>
             </div>
             <div id = "second">
                 <h2 id="song-name">${songData[currSecond].title}</h2>
                 <iframe src="${songData[currSecond].embed}?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                <button class="secondBtn">This</button>
+                <button class="secondBtn">This is Better</button>
             </div> 
         </div>
         `

@@ -14,7 +14,7 @@ body{
 div{
     margin: 0;
 }
-/* HEADING  */
+/* HEADING pink */
 #heading{
     height: 10vh;
     display: flex;
@@ -22,15 +22,19 @@ div{
     justify-content: center;
     color: white;
     font-weight: bold;
-    font-size: 6vw;
+    font-size: 4vw;
     /* border: 2px solid pink; */
     width: 100vw;
     margin: 0;
-    background-color: rgba(31, 81, 122, 0.596);
-
+    background-color: rgba(0, 0, 0, 0.596);
+}
+#heading p{
+    margin: 0;
+    padding: 0;
 }
 button{
-    width: max-content;
+    grid-row: -3;
+    width: 50%;
     margin: 0 auto;
     text-shadow: 0 0 2px black;
     padding: 0.5em 1em;
@@ -39,22 +43,34 @@ button{
     font-weight: bolder;
     text-transform: uppercase;
     transition: 0.3s;
-    background-color: rgb(0, 32, 58);
-    border-radius: 5%;
+    background-color: rgba(0, 0, 0, 0.521);
+    border-radius: 10px;
     border: none;
 }
 #song-name{
+    border-radius: 10px;
+    grid-row: 2;
     color: white;
     font-size: 4vw;
     width: max-content;
     margin: 0 auto;
     padding: 0.5em 1em;
-    background-color: rgba(0, 122, 221, 0.527);
+    background-color: rgba(0, 0, 0, 0.527);
 }
 button:hover{
-    background-color: rgb(16, 85, 141);
+    background-color: rgb(0, 0, 0);
 }
-@media (min-width: 600px) {
+@media (min-width: 250px) {
+    button,#song-name{
+        font-size: 0.6rem;
+    }
+}
+@media (min-width: 350px) {
+    button,#song-name{
+        font-size: 2vw;
+    }
+}
+@media (min-width: 800px) {
     #heading{
         font-size: 2rem;
     }
@@ -62,19 +78,20 @@ button:hover{
         font-size: 1.5rem;
     }
 }
+/* MAIN ELEMENT  */
 #main-el{
     margin: 0;
-    width: 100%;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
     /* border: 1px solid pink; */
     /* border: 10px solid black; */
 }
 #cols{
     margin:0;
     display: grid;
-    height: 80vh;
+    height: 90vh;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr ;
-    grid-template-rows: 50% 50%;
 }
 @media (min-width: 800px) {
     #cols{
@@ -83,30 +100,32 @@ button:hover{
     }
 }
 #first,#second{
-    padding: 1em;
-    margin:0;
+    padding: 0;
     height: 100%;
     display: grid;
     width: 100%;
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: 0.2fr min-content 3fr min-content 0.2fr;
     align-items: center;
 }
 #first{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.6);
 }
 #second{
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.6);
 }
 iframe{
+    grid-row: 3;
+    padding: 0;
     width: 90vw;
     margin: 0 auto;
     height: 30vh;
-    padding-bottom: 0.5em;
 }
-
+button,#song-name{
+    padding: 0.5em 1em;
+}
 @media (min-width:800px) {
     #first,#second{
-        height: 80vh;
+        height: 100%;
     }
     iframe{
         width: 40vw;
@@ -121,7 +140,8 @@ iframe{
     color: white;
     text-shadow: 0px 0px 3px black;
     font-size: 5vw;
-    margin: 5% auto;
+    margin: 0 auto;
+    /* margin-top: 10px; */
     width: max-content;
     /* border: 10px solid palegreen; */
     
