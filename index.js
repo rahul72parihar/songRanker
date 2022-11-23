@@ -7,7 +7,7 @@ let currArray = new Array(32).fill(0).map(function(){
 })
 let roundOf = 32
 let nextArray =[]
-let ranking = [1,2,3,4,5,6,7,8]
+let ranking = [1]
 let currFirst = 0;
 let currSecond = 0;
 let isClickable = true;
@@ -68,12 +68,12 @@ function render(){
         <div id = "cols">
             <div id = "first">
                 <h2 id="song-name">${songData[currFirst].title}</h2>
-                <iframe src="${songData[currFirst].embed}?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
+                <iframe src="${songData[currFirst].embed}?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" ></iframe>
                 <button class="firstBtn">This</button>
             </div>
             <div id = "second">
                 <h2 id="song-name">${songData[currSecond].title}</h2>
-                <iframe src="${songData[currSecond].embed}?autoplay=0&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                <iframe src="${songData[currSecond].embed}?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 <button class="secondBtn">This</button>
             </div> 
         </div>
@@ -95,10 +95,10 @@ document.addEventListener('click',function(e){
             e.target.disabled = true
             
         }
-        // isClickable = false;
-        // setTimeout(() => {
-        //     isClickable = true
-        // }, 1500);
+        isClickable = false;
+        setTimeout(() => {
+            isClickable = true
+        }, 1500);
         render()
     }
 })
