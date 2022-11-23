@@ -16,7 +16,7 @@ div{
 }
 /* HEADING pink */
 #heading{
-    height: 10vh;
+    height: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -78,6 +78,7 @@ button:hover{
 @media (min-width: 800px) {
     #heading{
         font-size: 2rem;
+        height: 10vh;
     }
     button,#song-name{
         font-size: 1.5rem;
