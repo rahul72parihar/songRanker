@@ -62,7 +62,7 @@ button:hover{
 }
 @media (min-width: 250px) {
     button,#song-name{
-        font-size: 0.6rem;
+        font-size: 1rem;
     }
 }
 @media (min-width: 350px) {
