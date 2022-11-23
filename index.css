@@ -62,12 +62,17 @@ button:hover{
 }
 @media (min-width: 250px) {
     button,#song-name{
-        font-size: 1rem;
+        font-size: 4vw;
     }
 }
 @media (min-width: 350px) {
     button,#song-name{
-        font-size: 2vw;
+        font-size: 4vw;
+    }
+}
+@media (min-width: 450px) {
+    button,#song-name{
+        font-size: 1rem;
     }
 }
 @media (min-width: 800px) {
@@ -89,12 +94,13 @@ button:hover{
 #cols{
     margin:0;
     display: grid;
-    height: 90vh;
+    height: 80vh;
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr ;
 }
 @media (min-width: 800px) {
     #cols{
+        height: 90vh;
         grid-template-rows: 1fr ;
         grid-template-columns:1fr 1fr;
     }
@@ -118,7 +124,7 @@ iframe{
     padding: 0;
     width: 90vw;
     margin: 0 auto;
-    height: 30vh;
+    height: 25vh;
 }
 button,#song-name{
     padding: 0.5em 1em;
