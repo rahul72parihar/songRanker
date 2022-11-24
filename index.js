@@ -32,7 +32,7 @@ function arrayOperation(len){
 function renderEnd(){
     let str = `<div id = "endSpace"></div>`
     str += `<div class = "endMain">`
-    if (forceEnd)
+    if (forceEnd && forceEnd==3)
         str += `<h2 class = "endMid" >Developer's List</h2>`
     str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endTop" >👑 1. ${songData[ranking.pop()].title}</h2></a>`
     str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endMid" >2. ${songData[ranking.pop()].title}</h2></a>`
