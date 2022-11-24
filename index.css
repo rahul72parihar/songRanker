@@ -157,6 +157,10 @@ button,#song-name{
     /* border: 10px solid palegreen; */
     
 }
+#endSpace{
+    height: 10vh;
+    width: 100%;
+}
 .endMain h2{
     font-size: inherit;
     margin: 0;
@@ -178,16 +182,16 @@ button,#song-name{
 }
 @media (min-width : 800px) {
     .endMain{
-        font-size: 2rem;
+        font-size: 1.5rem;
     }
     .endMain .endTop{
-        font-size: 3.5rem;
-    }
-    .endMain .endMid{
         font-size: 2.5rem;
     }
+    .endMain .endMid{
+        font-size: 1.7rem;
+    }
     .endMain .endLower{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     .endMain .endEnd{
         font-size: 1.5rem;

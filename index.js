@@ -1,5 +1,5 @@
 import { songData } from "./data.js";
-console.log("SONGDATA LENGTH"+songData.length)
+// console.log("SONGDATA LENGTH"+songData.length)
 // document.getElementById("heading").textContent = songData.length
 let sum = 0
 let currArray = new Array(32).fill(0).map(function(){
@@ -9,7 +9,7 @@ let currArray = new Array(32).fill(0).map(function(){
 let done = 0
 let roundOf = 32
 let nextArray =[]
-let ranking = [1,2,4,5,6,8,9,10,1]
+let ranking = []
 let currFirst = 0;
 let currSecond = 0;
 let isClickable = true;
@@ -24,14 +24,16 @@ function getRandomIndex(len){
 function arrayOperation(len){
     let ans = getRandomIndex(len)
     ans = currArray[ans]
-    console.log("currIndex = "+ans)
+    // console.log("currIndex = "+ans)
     currArray = arrayRemove(ans)
-    console.log(currArray)
+    // console.log(currArray)
     return ans
 }
 function renderEnd(){
-    let str = ``
+    let str = `<div id = "endSpace"></div>`
     str += `<div class = "endMain">`
+    if (forceEnd)
+        str += `<h2 class = "endMid" >Developer's List</h2>`
     str += `<h2 class = "endTop" >👑 1. ${songData[ranking.pop()].title}</h2>`
     str += `<h2 class = "endMid" >2. ${songData[ranking.pop()].title}</h2>`
     str += `<h2 class = "endMid" >3. ${songData[ranking.pop()].title}</h2>`
@@ -40,14 +42,14 @@ function renderEnd(){
     str += `<h2 class = "endLower" >${songData[ranking.pop()].title}</h2>`
     str += `<h2 class = "endEnd" >${songData[ranking.pop()].title}</h2>`
     str += `<h2 class = "endEnd" >${songData[ranking.pop()].title}</h2>`
-    str += `</div>`
+    str += `</div><div id = "endSpace"></div>`
     document.getElementById("main-el").innerHTML= str
 
-    console.log("THIS IS THE END")
+    // console.log("THIS IS THE END")
 }
 function render(){
     if(currArray.length==0){
-        console.log("array reassign")
+        // console.log("array reassign")
         currArray=nextArray
         if(currArray.length==1){
             ranking.push(currArray[0])
@@ -55,7 +57,7 @@ function render(){
             return
         }
         nextArray=[]
-        console.log("array after reassign = "+currArray)
+        // console.log("array after reassign = "+currArray)
         roundOf = currArray.length
         done = 0
     }
@@ -65,8 +67,8 @@ function render(){
     else if(roundOf==8)headingText = `Quater Finals 🔥 || ${done/2}/ ${roundOf/2}`
     else if(roundOf==4)headingText = `😲 Semi-Finale 😲 || ${done/2}/ ${roundOf/2}`
     else if(roundOf==2)headingText = `👑👑👑  Finals  👑👑👑`
-    console.log(currArray)
-    console.log("nextArray = "+nextArray)
+    // console.log(currArray)
+    // console.log("nextArray = "+nextArray)
     currFirst = arrayOperation(currArray.length)
     currSecond = arrayOperation(currArray.length)
     document.getElementById("main-el").innerHTML=
@@ -136,4 +138,7 @@ forceEndEl.addEventListener('click',function(){
 //     render()
 // }
 // array = arrayRemove(array, 6);
-// console.log(array)
+setTimeout(function(){
+    console.log("CLICK ON HEADING 3 TIMES FOR FINAL RENDER")
+},3500)
+
