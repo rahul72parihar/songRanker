@@ -124,7 +124,7 @@ const forceEndEl = document.getElementById("heading")
 forceEndEl.addEventListener('click',function(){
     console.log("clicked")
     forceEnd++;
-    if(forceEnd==3){
+    if(forceEnd>=3){
         renderEnd()
     }
 })
