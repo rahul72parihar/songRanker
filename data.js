@@ -32,7 +32,7 @@ export const songData = [
         embed : `https://www.youtube.com/embed/7_NT-KQWhtA`  
     },
     {
-        title : "MOB D || MOTORCYCLE",
+        title : "MOB D | MOTORCYCLE",
         embed : `https://www.youtube.com/embed/jvqsTP2jbMo`  
     },
     {
@@ -80,7 +80,7 @@ export const songData = [
         embed : `https://www.youtube.com/embed/y-PF51nSwFI`  
     },
     {
-        title : "No Love",
+        title : "Shubh - No Love",
         embed : `https://www.youtube.com/embed/6RrEQJNZwPQ`  
     },
     {

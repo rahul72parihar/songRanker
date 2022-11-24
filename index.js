@@ -9,7 +9,7 @@ let currArray = new Array(32).fill(0).map(function(){
 let done = 0
 let roundOf = 32
 let nextArray =[]
-let ranking = []
+let ranking = [16,17,27,20,22,2,5,31]
 let currFirst = 0;
 let currSecond = 0;
 let isClickable = true;
@@ -34,14 +34,14 @@ function renderEnd(){
     str += `<div class = "endMain">`
     if (forceEnd)
         str += `<h2 class = "endMid" >Developer's List</h2>`
-    str += `<h2 class = "endTop" >👑 1. ${songData[ranking.pop()].title}</h2>`
-    str += `<h2 class = "endMid" >2. ${songData[ranking.pop()].title}</h2>`
-    str += `<h2 class = "endMid" >3. ${songData[ranking.pop()].title}</h2>`
-    str += `<h2 class = "endLower" >${songData[ranking.pop()].title}</h2>`
-    str += `<h2 class = "endLower" >${songData[ranking.pop()].title}</h2>`
-    str += `<h2 class = "endLower" >${songData[ranking.pop()].title}</h2>`
-    str += `<h2 class = "endEnd" >${songData[ranking.pop()].title}</h2>`
-    str += `<h2 class = "endEnd" >${songData[ranking.pop()].title}</h2>`
+    str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endTop" >👑 1. ${songData[ranking.pop()].title}</h2></a>`
+    str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endMid" >2. ${songData[ranking.pop()].title}</h2></a>`
+    str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endMid" >3. ${songData[ranking.pop()].title}</h2></a>`
+    str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endLower" >${songData[ranking.pop()].title}</h2></a>`
+    str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endLower" >${songData[ranking.pop()].title}</h2></a>`
+    str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endLower" >${songData[ranking.pop()].title}</h2></a>`
+    str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target = "_blank"><h2 class = "endEnd" >${songData[ranking.pop()].title}</h2></a>`
+    str += `<a href = "${songData[ranking[ranking.length-1]].embed}" target ="_blank"><h2 class = "endEnd" >${songData[ranking.pop()].title}</h2></a>`
     str += `</div><div id = "endSpace"></div>`
     document.getElementById("main-el").innerHTML= str
 

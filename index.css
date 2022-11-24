@@ -1,6 +1,15 @@
 *, *::before, *::after{
     box-sizing: border-box;
 }
+a{
+
+    /* text-shadow: none; */
+    text-decoration: none;
+    font-family: inherit;
+    text-shadow: none;
+    color: white;
+}
+
 body{
     font-family: 'roboto';
     margin:0;
@@ -161,10 +170,16 @@ button,#song-name{
     height: 10vh;
     width: 100%;
 }
-.endMain h2{
+.endMain a h2,.endMain h2{
+    text-transform: uppercase;
     font-size: inherit;
     margin: 0;
-    padding: 0.5em;
+    transition: 0.4s;
+    padding: 0.4em 2em;
+}
+.endMain a h2:hover{
+    border-radius: 10px;
+    background-color: rgba(255, 0, 221, 0.397);
 }
 .endMain .endTop{
     font-size: 7vw;
@@ -191,9 +206,9 @@ button,#song-name{
         font-size: 1.7rem;
     }
     .endMain .endLower{
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
     .endMain .endEnd{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 }
